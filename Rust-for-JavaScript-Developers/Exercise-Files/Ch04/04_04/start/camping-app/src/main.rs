@@ -1,13 +1,12 @@
-#[derive(Debug)]
-enum Steepness {
-    Easy,
-    Moderate,
-    Difficult,
+struct Hiker {
+    name: String,
+    miles_hiked: u64,
 }
 
 fn main() {
-    let _calm_trail = Steepness::Easy;
-    let _fun_trail = Steepness::Moderate;
-    let prickly_peak_trail = Steepness::Difficult;
-    println!("Steepness is {:?}", prickly_peak_trail);
+    let jennifer = Hiker {
+        name: String::from("Jennifer"),
+        miles_hiked: 49,
+    };
+    println!("{} has hiked {} miles", jennifer.name, jennifer.miles_hiked)
 }

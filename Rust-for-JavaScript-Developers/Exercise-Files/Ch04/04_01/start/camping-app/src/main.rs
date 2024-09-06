@@ -1,8 +1,11 @@
-fn main() {
-    let mut new_year_countdown = 10;
+fn sentence_builder(person_info: (&str, u64, &str)) {
+    println!(
+        "{} is {}, and her last initial is {}.",
+        person_info.0, person_info.1, person_info.2
+    );
+}
 
-    while new_year_countdown > 0 {
-        println!("{new_year_countdown}");
-        new_year_countdown -= 1;
-    }
+fn main() {
+    let values = ("Eve", 38, "P");
+    sentence_builder(values);
 }

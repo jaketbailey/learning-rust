@@ -1,7 +1,13 @@
-use std::fs;
+use std::fs::OpenOptions;
+use std::io::Write;
 
 fn main() {
-    let text = fs::read_to_string("my_file.txt").expect("Something went wrong reading the file");
+    let mut file = OpenOptions::new()
+        .append(true)
+        .open("my_file.txt")
+        .expect("Could not open file");
 
-    println!("What is in this file:\n{}", text);
+    let text = " We're making it happen!";
+    file.write_all(text.as_bytes())
+        .expect("Could not write to file");
 }

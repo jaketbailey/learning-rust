@@ -1,12 +1,6 @@
-struct Hiker {
-    name: String,
-    miles_hiked: u64,
-}
+use std::fs;
 
 fn main() {
-    let jennifer = Hiker {
-        name: String::from("Jennifer"),
-        miles_hiked: 49,
-    };
-    println!("{} has hiked {} miles", jennifer.name, jennifer.miles_hiked);
+    let text = fs::read_to_string("my_file.txt").expect("Something went wrong reading the file");
+    println!("What is in this file:\n{}", text);
 }

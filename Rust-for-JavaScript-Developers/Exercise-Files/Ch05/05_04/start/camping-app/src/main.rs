@@ -1,10 +1,15 @@
 fn main() {
-    let destination = "Snow Lake";
-
-    match destination {
-        "Long Lake" => println!("We're heading to Long Lake!"),
-        "Mammoth Lakes" => println!("We're heading to Mammoth!"),
-        "Bowman Lake" => println!("We're heading to Bowman Lake!"),
-        _ => println!("We're heading anywhere else"),
+    struct Hiker {
+        name: String,
+        miles_hiked: u64,
     }
+
+    let billy = Hiker {
+        name: "Billy".to_string(),
+        miles_hiked: 67,
+    };
+
+    let Hiker {name, miles_hiked} = billy;
+
+    println!("name {}, miles: {}", name, miles_hiked);
 }

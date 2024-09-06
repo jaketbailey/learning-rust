@@ -1,15 +1,15 @@
 fn calculate_distance(days: u64, distance: u64) -> Result<u64, String> {
     if days == 0 {
-        Err("Cannot go on a zero day hike".to_string())
+        return Err("Days cannot be zero".to_string());
     } else {
         Ok(days * distance)
     }
 }
 
 fn main() {
-    let result = calculate_distance(0, 10);
+    let result = calculate_distance(5, 10);
     match result {
-        Ok(miles) => println!("Miles: {}", miles),
+        Ok(total_miles) => println!("Total miles: {}", total_miles),
         Err(error) => println!("Error: {}", error),
     }
 }
