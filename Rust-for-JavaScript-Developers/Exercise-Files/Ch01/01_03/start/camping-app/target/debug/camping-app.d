@@ -1,0 +1,1 @@
+/home/jaketbailey/git/learning-rust/Rust-for-JavaScript-Developers/Exercise-Files/Ch01/01_03/start/camping-app/target/debug/camping-app: /home/jaketbailey/git/learning-rust/Rust-for-JavaScript-Developers/Exercise-Files/Ch01/01_03/start/camping-app/src/main.rs

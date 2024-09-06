@@ -1,0 +1,1 @@
+searchState.loadedDescShard("camping_app", 0, "Prints the value of the constant DESTINATION to the …")
